@@ -1,0 +1,11 @@
+<div class="box">
+  <form class="create-form"   [formGroup]="eform" novalidate (ngSubmit)="onSubmit(eform.value)">
+
+    
+  <input class="form-control"  formControlName="name" placeholder="name">
+  <input class="form-control" formControlName="surname" placeholder="surname">
+  <input class="form-control" formControlName="email" placeholder="email">
+   <button  type="submit" [disabled]="!eform.valid" >Submit</button>
+
+</form>
+</div>

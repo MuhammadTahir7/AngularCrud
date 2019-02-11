@@ -1,0 +1,12 @@
+
+<div *ngFor="let items of items">
+<form class="edit-form" [formGroup]="eform" novalidate (ngSubmit)="onSubmit(eform.value)">
+
+    
+  <input class="form-control" formControlName="name" {{items.payload.doc.data().name}}  placeholder="name">
+  <input class="form-control" {{items.payload.doc.data().surname}} formControlName="surname" placeholder="surname">
+  <input class="form-control" {{items.payload.doc.data().email}} formControlName="email" placeholder="email">
+  <button type="submit" [disabled]="!eform.valid" >Update</button>
+  <button (click)="delete()">delete</button>
+</form>
+</div>

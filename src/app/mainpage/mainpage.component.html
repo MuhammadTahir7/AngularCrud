@@ -1,0 +1,15 @@
+<div *ngFor="let items of items">
+  <div class="row">
+    
+    <div class="col col-md-8 text-col">
+      <h5 class="mb-1">{{items.payload.doc.data().name}} {{items.payload.doc.data().surname}}</h5>
+      <small>email: {{items.payload.doc.data().age}}</small>
+    </div>
+    
+    </div>
+    <div class="col col-md-2 actions-col">
+
+      <button (click)="viewDetails(items)" > clickk</button>
+    </div>
+  </div>
+  
